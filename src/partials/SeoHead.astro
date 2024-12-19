@@ -1,0 +1,120 @@
+---
+import { AstroSeo } from "@astrolib/seo";
+import type { SeoProps } from "./head";
+import {
+  generateVideoStructuredData,
+  generateArticleStructuredData,
+} from "../generateStructuredData";
+
+const {
+  title,
+  description,
+  canonical = Astro.url.href,
+  image = "https://yourdomain.com/default-og-image.png",
+  images = [],
+  keywords = [],
+  noindex = false,
+  nofollow = false,
+  publishedTime,
+  modifiedTime,
+  type = "website",
+  locale = "en_US",
+  lang,
+  structuredData = [],
+  twitter = {
+    cardType: "summary_large_image",
+  },
+} = Astro.props as SeoProps;
+
+// Generate default structured data based on type
+const defaultStructuredData =
+  type === "video.other"
+    ? [
+        generateVideoStructuredData({
+          title,
+          description,
+          image,
+          canonical,
+          publishedTime,
+        }),
+      ]
+    : type === "article"
+      ? [
+          generateArticleStructuredData({
+            title,
+            description,
+            image,
+            canonical,
+            publishedTime,
+            modifiedTime,
+            locale,
+          }),
+        ]
+      : [];
+
+// Combine default and custom structured data
+const combinedStructuredData = [...defaultStructuredData, ...structuredData];
+---
+
+<head lang={lang}>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta
+    name="robots"
+    content={`${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`}
+  />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no"
+  />
+
+  {
+    keywords.length > 0 && (
+      <meta name="keywords" content={keywords.join(", ")} />
+    )
+  }
+
+  <AstroSeo
+    title={title}
+    description={description}
+    canonical={canonical}
+    noindex={noindex}
+    nofollow={nofollow}
+    openGraph={{
+      title,
+      type,
+      url: canonical,
+      description,
+      images: [
+        {
+          url: image,
+          width: 1200,
+          height: 630,
+          alt: title,
+        },
+        ...images,
+      ],
+      locale,
+      site_name: "saveplaybacks.com",
+    }}
+    twitter={{
+      handle: twitter.handle,
+      site: twitter.site,
+      cardType: twitter.cardType,
+    }}
+  />
+
+  {
+    combinedStructuredData.map((data) => (
+      <script type="application/ld+json" set:html={JSON.stringify(data)} />
+    ))
+  }
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap"
+    rel="stylesheet"
+  />
+
+  <slot />
+</head>

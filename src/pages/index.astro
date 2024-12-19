@@ -1,16 +1,81 @@
 ---
-
+// import DownloaderInput from "../../components/DownloaderInput";
+import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import { SearchInput } from "../../components/Input";
+import FeaturesAndCompatibilities from "../partials/FeaturesAndCompatibilities.astro";
+import FeaturesGrid from "../partials/FeaturesGrid.astro";
+import SeoHead from "../partials/SeoHead.astro";
+import { type SeoProps } from "../partials/head";
+import "../yt-index.scss";
+import MainContent from "../MainContent.astro";
+import Footer from "saveplays-footer/src/partials/Footer.astro";
+const pageProps: SeoProps = {
+	title: "Free Online Video Downloader - saveplaybacks.com",
+	description:
+		"Download videos from popular platforms with saveplaybacks.com, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!",
+	canonical: "https://saveplaybacks.com",
+	image: "https://en1.saveplaybacks.com/img/extension/icon_128_2.png",
+	images: [
+		{
+			url: "https://en1.saveplaybacks.com/img/main/howWatch.png",
+			width: 800,
+			height: 600,
+			alt: "How to Watch",
+		},
+	],
+	keywords: ["video downloader", "online video", "free download"],
+	type: "website",
+	publishedTime: "2024-01-05T00:00:00+00:00",
+	modifiedTime: "2024-09-27T15:56:10+00:00",
+	twitter: {
+		handle: "@saveplaybacks",
+		site: "@saveplaybacks",
+	},
+	structuredData: [
+		{
+			"@context": "http://schema.org/",
+			"@type": "SoftwareApplication",
+			name: "SavePlaybacks",
+			description:
+				"The leading free online video downloader for various platforms.",
+			applicationCategory: "MultimediaApplication",
+			operatingSystem: ["Windows", "macOS", "Android", "iOS"],
+			offers: {
+				"@type": "Offer",
+				price: "0",
+				priceCurrency: "USD",
+			},
+			aggregateRating: {
+				"@type": "AggregateRating",
+				ratingValue: "4.8",
+				ratingCount: "53281",
+				bestRating: "5",
+				worstRating: "1",
+			},
+		},
+	],
+	lang: "en",
+	locale: "en_US",
+	nofollow: false,
+	noindex: false,
+};
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
+<html>
+	<SeoHead {...pageProps} />
 	<body>
-		<h1>Astro</h1>
+		<NavBar client:load />
+		<div class="container">
+			<h1 class="text-center">Free Online Video Downloader</h1>
+		</div>
+		<main>
+			<div class="container">
+				<SearchInput client:load />
+				<FeaturesGrid />
+				<MainContent />
+				<FeaturesAndCompatibilities />
+			</div>
+		</main>
+		<Footer />
 	</body>
 </html>

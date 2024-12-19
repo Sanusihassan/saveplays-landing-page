@@ -1,0 +1,124 @@
+---
+// FeaturesAndCompatibilities.astro
+// pleae make this good looking for the eye i.e give it a good styles. you can use any third party library but not tailwindcss.
+// i like scss
+---
+
+<div class="features-and-compatibility">
+    <div class="features-and-compatibility-text">
+        <h2>
+            Check out different video resolutions - From SD to 4K video download
+            support
+        </h2>
+        <p>
+            Our versatile video downloader offers a wide range of video
+            resolutions, including MP4, SD, HD, FullHD, 2K, and 4K formats. The
+            available resolution options for download depend on the original
+            quality of the source video. For example, if a video is uploaded in
+            1080p, you can download it in the same high definition (HD) quality.
+        </p>
+    </div>
+    <img
+        src="/4k.webp"
+        width="354"
+        height="216"
+        alt="Download HD, Full HD, and 4K videos"
+        title="Download HD, Full HD, and 4K videos"
+    />
+</div>
+<div class="features-and-compatibility mb-100">
+    <div class="features-and-compatibility-text">
+        <h2>Browser compatibility - Download videos easily</h2>
+        <p>
+            Maximize your video download experience with our tool's perfect
+            compatibility across all major browsers, including Google Chrome,
+            Mozilla Firefox, Safari, Opera, and other Chromium-based browsers.
+            Enjoy smooth and efficient video downloads on any of these
+            platforms.
+        </p>
+    </div>
+    <img
+        src="/browser-compatibility.webp"
+        width="354"
+        height="217"
+        alt="Compatible with major browsers for video downloads"
+    />
+</div>
+
+<style lang="scss">
+    .features-and-compatibility {
+        $spacing-lg: 3rem;
+        $spacing-md: 2rem;
+
+        $text-color: #374151;
+        $transition-speed: 0.3s;
+
+        display: flex;
+        align-items: center;
+        gap: $spacing-lg;
+        padding: $spacing-lg 0;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        // Make it responsive
+        @media (max-width: 768px) {
+            flex-direction: column;
+            text-align: center;
+            gap: $spacing-md;
+            padding: $spacing-md 1rem;
+        }
+
+        &.mb-100 {
+            margin-bottom: 100px;
+        }
+
+        &-text {
+            flex: 1;
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 700;
+
+                margin-bottom: 1rem;
+                line-height: 1.2;
+
+                @media (max-width: 768px) {
+                    font-size: 1.5rem;
+                }
+            }
+
+            p {
+                font-size: 1.1rem;
+                line-height: 1.6;
+                color: $text-color;
+                margin: 0;
+            }
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            transition: transform $transition-speed ease;
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+
+            @media (max-width: 768px) {
+                width: 100%;
+                max-width: 354px;
+            }
+        }
+
+        // Alternate layout for even sections
+        &:nth-child(even) {
+            flex-direction: row-reverse;
+
+            @media (max-width: 768px) {
+                flex-direction: column;
+            }
+        }
+    }
+</style>

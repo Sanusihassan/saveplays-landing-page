@@ -1,0 +1,86 @@
+@import "cssmolecule";
+@import "custom-bs";
+@import "./mixins";
+@include bootstrap;
+
+body {
+    font-family: "Averia Serif Libre", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.text-center {
+    @include extend("text-center");
+}
+
+.container {
+    @include extend("container");
+}
+
+$main-color: #2ab7a9;
+
+.searh-input {
+    @include extend("row");
+    flex-wrap: nowrap;
+
+    .input {
+        flex: 2 0 80%;
+
+        @include sm {
+            flex: 1 0 80%;
+        }
+
+        @include xs {
+            flex: 1 0 75%;
+        }
+
+        user-select: none;
+    }
+
+    input {
+        box-sizing: border-box;
+        background-color: transparent;
+        @include extend("w-100 h-100");
+        font-size: 1em;
+        padding: 0 .5em;
+        border: 2px solid #ccc;
+        transition: border-color .2s, box-shadow .2s;
+        outline: none;
+
+        &:focus {
+            border-color: $main-color;
+        }
+    }
+
+    button {
+        @include extend("btn btn-light");
+        color: inherit;
+        padding: .85em 0;
+        margin: 0;
+        display: inline-block;
+        vertical-align: middle;
+        border: 0;
+        border: 2px solid #ccc;
+
+        // border-left-width: 0;
+        &:focus {
+            border-color: $main-color;
+        }
+
+        flex: 1 1 0%;
+
+        svg.loading {
+            animation: 0.5s linear loading infinite forwards
+        }
+    }
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(-360deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
