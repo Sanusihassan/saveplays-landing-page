@@ -17,7 +17,7 @@
     "custom-bs": "^1.3.0",
     "react-icons": "^5.4.0",
     "react-select": "^5.9.0",
-    "saveplays-footer": "^0.0.1",
+    "saveplays-footer": "^0.0.2",
     "saveplays-navbar": "^0.0.2",
     "typescript": "^5.7.2"
   },

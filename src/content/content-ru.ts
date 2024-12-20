@@ -72,7 +72,7 @@ export const pageProps: SeoProps = {
     title: "Бесплатный онлайн загрузчик видео - saveplays.com",
     description:
         "Скачивайте видео с популярных платформ с помощью saveplays.com — ведущего бесплатного онлайн загрузчика видео. Легко сохраняйте видео в различных форматах и разрешениях. Начните скачивание уже сейчас!",
-    image: "/images/saveplays.png",
+    image: "/images/saveplays-ru.png",
     keywords: ["загрузчик видео", "онлайн видео", "бесплатное скачивание"],
     type: "website",
     publishedTime: "2024-01-05T00:00:00+00:00",
