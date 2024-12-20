@@ -1,0 +1,40 @@
+---
+// import DownloaderInput from "../../components/DownloaderInput";
+import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import { SearchInput } from "../../../components/Input";
+import FeaturesAndCompatibilities from "../../partials/FeaturesAndCompatibilities.astro";
+import FeaturesGrid from "../../partials/FeaturesGrid.astro";
+import SeoHead from "../../partials/SeoHead.astro";
+import "../../yt-index.scss";
+import MainContent from "../../MainContent.astro";
+import Footer from "saveplays-footer/src/partials/Footer.astro";
+import {
+    featuresAndCompatibilities,
+    featuresGridContent,
+    mainContent,
+    placeholder,
+    title,
+    pageProps,
+} from "../../content/content-hi";
+---
+
+<html lang="hi">
+    <SeoHead {...pageProps} />
+    <body>
+        <NavBar client:load lang="hi" />
+        <div class="container">
+            <h1 class="text-center">{title}</h1>
+        </div>
+        <main>
+            <div class="container">
+                <SearchInput client:load placeholder={placeholder} />
+                <FeaturesGrid content={featuresGridContent} />
+                <MainContent content={mainContent} />
+                <FeaturesAndCompatibilities
+                    content={featuresAndCompatibilities}
+                />
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>

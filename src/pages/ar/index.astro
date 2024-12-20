@@ -1,0 +1,81 @@
+---
+// import DownloaderInput from "../../components/DownloaderInput";
+import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import { SearchInput } from "../../../components/Input";
+import FeaturesAndCompatibilities from "../../partials/FeaturesAndCompatibilities.astro";
+import FeaturesGrid from "../../partials/FeaturesGrid.astro";
+import SeoHead from "../../partials/SeoHead.astro";
+import { type SeoProps } from "../../partials/head";
+import "../../yt-index.scss";
+import MainContent from "../../MainContent.astro";
+import Footer from "saveplays-footer/src/partials/Footer.astro";
+import {
+    featuresAndCompatibilities,
+    featuresGridContent,
+    mainContent,
+    placeholder,
+    title,
+} from "../../content/content-ar";
+
+const pageProps: SeoProps = {
+    title: "موقع تحميل الفيديوهات المجاني على الإنترنت - saveplays.com",
+    description:
+        "قم بتحميل الفيديوهات من المنصات الشهيرة باستخدام saveplays.com، أفضل موقع مجاني لتحميل الفيديوهات عبر الإنترنت. احفظ الفيديوهات بسهولة بصيغ ودقات مختلفة. ابدأ التحميل الآن!",
+    image: "/images/saveplays-ar.png",
+    keywords: ["تحميل الفيديو", "فيديو على الإنترنت", "تحميل مجاني"],
+    type: "website",
+    publishedTime: "2024-01-05T00:00:00+00:00",
+    modifiedTime: "2024-09-27T15:56:10+00:00",
+    twitter: {
+        handle: "@saveplays",
+        site: "@saveplays",
+    },
+    structuredData: [
+        {
+            "@context": "http://schema.org/",
+            "@type": "SoftwareApplication",
+            name: "saveplays",
+            description: "أفضل موقع مجاني لتحميل الفيديوهات من مختلف المنصات.",
+            applicationCategory: "تطبيق الوسائط المتعددة",
+            operatingSystem: ["Windows", "macOS", "Android", "iOS"],
+            offers: {
+                "@type": "Offer",
+                price: "0",
+                priceCurrency: "USD",
+            },
+            aggregateRating: {
+                "@type": "AggregateRating",
+                ratingValue: "4.8",
+                ratingCount: "53281",
+                bestRating: "5",
+                worstRating: "1",
+            },
+        },
+    ],
+    lang: "ar",
+    locale: "ar_SA",
+    nofollow: false,
+    noindex: false,
+};
+---
+
+<html lang="ar">
+    <SeoHead {...pageProps} />
+    <body>
+        <NavBar client:load lang="ar" />
+        <div class="container">
+            <h1 class="text-center">{title}</h1>
+        </div>
+        <main>
+            <div class="container">
+                <SearchInput client:load placeholder={placeholder} />
+                <FeaturesGrid content={featuresGridContent} />
+                <MainContent content={mainContent} />
+                <FeaturesAndCompatibilities
+                    content={featuresAndCompatibilities}
+                />
+            </div>
+        </main>
+        <Footer />
+    </body>
+</html>

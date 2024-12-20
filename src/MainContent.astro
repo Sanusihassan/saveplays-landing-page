@@ -1,57 +1,28 @@
 ---
-// MainContent.astro:
+const { content } = Astro.props;
 ---
 
 <div class="main-content">
-    <h2>Free Online Video Downloader.</h2>
-    <h3>Guide to Using SavePlays.com's Online Video Downloader</h3>
-    <p>
-        Efficiently download videos and music with SavePlays.com, the leading
-        Online Video Downloader. Secure your favorite media directly from the
-        web with no need for additional software. Our user-friendly platform
-        ensures downloading videos is simple and effective.
-    </p>
-    <p>
-        Conveniently access and download a wide array of content, from top
-        movies and trending TV series to exciting sports clips. Just paste the
-        video URL into the specified field and hit the Download button. For even
-        speedier downloads, consider adding our dedicated Chrome extension to
-        your browser.
-    </p>
-    <h4>Download High-Quality MP4 Videos</h4>
-    <p>
-        Streaming videos online with a fast connection offers immediate access,
-        but offline playback comes with its own advantages. SavePlays.com
-        provides a powerful video downloader that keeps your downloads in
-        pristine visual quality, enabling you to save videos in clear,
-        high-definition MP4 format.
-    </p>
-    <p>
-        With our reliable service, enjoy your favorite videos anytime, anywhere,
-        by converting and saving them as high-quality HD MP4 files.
-    </p>
-    <h5>How to Download Videos Online in MP4 Format with High Definition</h5>
+    <h2>{content.title}</h2>
+    <h3>{content.guideTitle}</h3>
+    <p>{content.introduction}</p>
+    <p>{content.details}</p>
+    <h4>{content.highQualityTitle}</h4>
+    <p>{content.highQualityDescription}</p>
+    <p>{content.benefits}</p>
+    <h5>{content.howToTitle}</h5>
     <ol>
         <li>
-            Paste your video link.
-            <p>
-                Copy the URL of your desired video from your preferred platform
-                and paste it into the input field on the SavePlays.com homepage.
-            </p>
+            {content.steps.step1.title}
+            <p>{content.steps.step1.description}</p>
         </li>
         <li>
-            Select download quality.
-            <p>
-                Our platform provides a choice of resolutions and formats.
-                Choose the one that suits your requirements.
-            </p>
+            {content.steps.step2.title}
+            <p>{content.steps.step2.description}</p>
         </li>
         <li>
-            Enjoy downloaded videos.
-            <p>
-                Click the Download button and save the video file directly to
-                your device. Play it anytime without internet dependency.
-            </p>
+            {content.steps.step3.title}
+            <p>{content.steps.step3.description}</p>
         </li>
     </ol>
 </div>

@@ -2,3 +2,14 @@
 @import "saveplays-navbar/src/scss/mixins";
 @import "saveplays-navbar/src/scss/navbar";
 @import "saveplays-footer/src/scss/footer";
+
+body {
+    @include ar-wrapper {
+        direction: rtl;
+        @include extend("text-right");
+
+        svg {
+            direction: ltr
+        }
+    }
+}

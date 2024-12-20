@@ -1,47 +1,30 @@
 ---
-// FeaturesAndCompatibilities.astro
-// pleae make this good looking for the eye i.e give it a good styles. you can use any third party library but not tailwindcss.
-// i like scss
+const { content } = Astro.props;
 ---
 
 <div class="features-and-compatibility">
     <div class="features-and-compatibility-text">
-        <h2>
-            Check out different video resolutions - From SD to 4K video download
-            support
-        </h2>
-        <p>
-            Our versatile video downloader offers a wide range of video
-            resolutions, including MP4, SD, HD, FullHD, 2K, and 4K formats. The
-            available resolution options for download depend on the original
-            quality of the source video. For example, if a video is uploaded in
-            1080p, you can download it in the same high definition (HD) quality.
-        </p>
+        <h2>{content.resolutionTitle}</h2>
+        <p>{content.resolutionDescription}</p>
     </div>
     <img
         src="/4k.webp"
         width="354"
         height="216"
-        alt="Download HD, Full HD, and 4K videos"
-        title="Download HD, Full HD, and 4K videos"
+        alt={content.resolutionImageAlt}
+        title={content.resolutionImageTitle}
     />
 </div>
 <div class="features-and-compatibility mb-100">
     <div class="features-and-compatibility-text">
-        <h2>Browser compatibility - Download videos easily</h2>
-        <p>
-            Maximize your video download experience with our tool's perfect
-            compatibility across all major browsers, including Google Chrome,
-            Mozilla Firefox, Safari, Opera, and other Chromium-based browsers.
-            Enjoy smooth and efficient video downloads on any of these
-            platforms.
-        </p>
+        <h6>{content.compatibilityTitle}</h6>
+        <p>{content.compatibilityDescription}</p>
     </div>
     <img
         src="/browser-compatibility.webp"
         width="354"
         height="217"
-        alt="Compatible with major browsers for video downloads"
+        alt={content.compatibilityImageAlt}
     />
 </div>
 
@@ -75,7 +58,8 @@
         &-text {
             flex: 1;
 
-            h2 {
+            h2,
+            h6 {
                 font-size: 2rem;
                 font-weight: 700;
 

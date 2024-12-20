@@ -5,6 +5,7 @@ import {
     FaXTwitter,
     FaYoutube,
 } from "react-icons/fa6";
+const { content } = Astro.props;
 ---
 
 <section class="downloaders-features">
@@ -13,48 +14,53 @@ import {
             <a
                 href="/youtube-downloader"
                 class="downloaders-features-item youtube"
-                aria-label="YouTube Downloader"
+                aria-label={content.youtube.ariaLabel}
             >
                 <FaYoutube className="downloaders-features-icon" />
-                <h3 class="downloaders-features-title">YouTube Downloader</h3>
+                <h3 class="downloaders-features-title">
+                    {content.youtube.title}
+                </h3>
                 <p class="downloaders-features-description">
-                    Download videos in multiple formats and resolutions from
-                    YouTube
+                    {content.youtube.description}
                 </p>
             </a>
             <a
                 href="/facebook-downloader"
                 class="downloaders-features-item facebook"
-                aria-label="Facebook Downloader"
+                aria-label={content.facebook.ariaLabel}
             >
                 <FaFacebook className="downloaders-features-icon" />
-                <h3 class="downloaders-features-title">Facebook Downloader</h3>
+                <h3 class="downloaders-features-title">
+                    {content.facebook.title}
+                </h3>
                 <p class="downloaders-features-description">
-                    Save videos from Facebook with high-quality downloads
+                    {content.facebook.description}
                 </p>
             </a>
             <a
                 href="/instagram-downloader"
                 class="downloaders-features-item instagram"
-                aria-label="Instagram Downloader"
+                aria-label={content.instagram.ariaLabel}
             >
                 <FaInstagram className="downloaders-features-icon" />
-                <h3 class="downloaders-features-title">Instagram Downloader</h3>
+                <h3 class="downloaders-features-title">
+                    {content.instagram.title}
+                </h3>
                 <p class="downloaders-features-description">
-                    Download Instagram reels, posts, and stories easily
+                    {content.instagram.description}
                 </p>
             </a>
             <a
                 href="/twitter-downloader"
                 class="downloaders-features-item twitter"
-                aria-label="Twitter Downloader"
+                aria-label={content.twitter.ariaLabel}
             >
                 <FaXTwitter className="downloaders-features-icon" />
                 <h3 class="downloaders-features-title">
-                    X (Twitter) Downloader
+                    {content.twitter.title}
                 </h3>
                 <p class="downloaders-features-description">
-                    Grab videos and media from Twitter (X) with a single click
+                    {content.twitter.description}
                 </p>
             </a>
         </div>
