@@ -104,7 +104,6 @@ export const pageProps: SeoProps = {
             },
         },
     ],
-    lang: "ru",
     locale: "ru_RU",
     nofollow: false,
     noindex: false,

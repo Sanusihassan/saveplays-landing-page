@@ -9,7 +9,6 @@ export interface SeoProps {
         height?: number;
         alt?: string;
     }>;
-    lang: string;
     keywords?: string[];
     noindex?: boolean;
     nofollow?: boolean;

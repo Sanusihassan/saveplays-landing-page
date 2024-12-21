@@ -106,7 +106,6 @@ export const pageProps: SeoProps = {
             },
         },
     ],
-    lang: "id",
     locale: "id_ID",
     nofollow: false,
     noindex: false,

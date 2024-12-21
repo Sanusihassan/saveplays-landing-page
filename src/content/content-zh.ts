@@ -105,7 +105,6 @@ export const pageProps: SeoProps = {
             },
         },
     ],
-    lang: "zh",
     locale: "zh_CN",
     nofollow: false,
     noindex: false,

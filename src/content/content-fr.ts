@@ -103,7 +103,6 @@ export const pageProps: SeoProps = {
             },
         },
     ],
-    lang: "fr",
     locale: "fr_FR",
     nofollow: false,
     noindex: false,
