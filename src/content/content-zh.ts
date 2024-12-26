@@ -73,7 +73,7 @@ export const pageProps: SeoProps = {
     title: "免费在线视频下载器 - saveplays.com",
     description:
         "通过 saveplays.com 从热门平台下载视频，领先的免费在线视频下载器。轻松以多种格式和分辨率保存视频。立即开始下载！",
-    image: "/images/saveplays-zh.png",
+    image: "/saveplays-zh.png",
     keywords: ["视频下载器", "在线视频", "免费下载"],
     type: "website",
     publishedTime: "2024-01-05T00:00:00+00:00",
