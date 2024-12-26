@@ -74,7 +74,7 @@ export const pageProps: SeoProps = {
     title: "Kostenloser Online-Video-Downloader - saveplays.com",
     description:
         "Laden Sie Videos von beliebten Plattformen mit saveplays.com, dem führenden kostenlosen Online-Video-Downloader, herunter. Speichern Sie Videos einfach in verschiedenen Formaten und Auflösungen. Jetzt mit dem Download starten!",
-    image: "/saveplays-de.png",
+    image: "https://www.saveplays.com/saveplays-de.png",
     keywords: ["Video-Downloader", "Online-Video", "kostenloser Download"],
     type: "website",
     publishedTime: "2024-01-05T00:00:00+00:00",

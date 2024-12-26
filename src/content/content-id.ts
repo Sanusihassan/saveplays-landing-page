@@ -74,7 +74,7 @@ export const pageProps: SeoProps = {
     title: "Pengunduh Video Online Gratis - saveplays.com",
     description:
         "Unduh video dari platform populer dengan saveplays.com, pengunduh video online gratis terkemuka. Simpan video dengan mudah dalam berbagai format dan resolusi. Mulailah mengunduh sekarang!",
-    image: "/saveplays-id.png",
+    image: "https://www.saveplays.com/saveplays-id.png",
     keywords: ["pengunduh video", "video online", "unduh gratis"],
     type: "website",
     publishedTime: "2024-01-05T00:00:00+00:00",

@@ -71,7 +71,7 @@ export const pageProps: SeoProps = {
     title: "Téléchargeur de Vidéos en Ligne Gratuit - saveplays.com",
     description:
         "Téléchargez des vidéos depuis les plateformes populaires avec saveplays.com, le leader des téléchargeurs de vidéos en ligne gratuits. Enregistrez facilement des vidéos dans divers formats et résolutions. Commencez à télécharger dès maintenant !",
-    image: "/saveplays-fr.png",
+    image: "https://www.saveplays.com/saveplays-fr.png",
     keywords: ["téléchargeur de vidéos", "vidéo en ligne", "téléchargement gratuit"],
     type: "website",
     publishedTime: "2024-01-05T00:00:00+00:00",
