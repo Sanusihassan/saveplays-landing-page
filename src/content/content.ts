@@ -1,8 +1,3 @@
-/**
- * Translate the given content into french while keeping the structure intact. Use the specified types { _featuresGridContent, _mainContent, _featuresAndCompatibilities } for the featuresGridContent, mainContent, and featuresAndCompatibilities sections. Here is the original content for reference:
-
-*/
-// typescript
 import type { SeoProps } from "../partials/head";
 export const title = "Free Online Video Downloader";
 export const placeholder = "Paste your link here";
