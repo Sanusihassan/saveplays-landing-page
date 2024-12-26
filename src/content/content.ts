@@ -70,7 +70,7 @@ export const featuresAndCompatibilities = {
 export const pageProps: SeoProps = {
     title: "Free Online Video Downloader - saveplays.com",
     description:
-        "Download videos from popular platforms with saveplays.com, the leading free online video downloader. Easily save videos in various formats and resolutions. Start downloading now!",
+        "Save videos offline! saveplays.com lets you download from popular platforms in various formats.",
     image: "/saveplays.png",
     keywords: ["video downloader", "online video", "free download"],
     type: "website",
