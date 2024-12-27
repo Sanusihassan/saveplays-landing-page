@@ -17,6 +17,8 @@ import {
     title,
 } from "../../content/content-ar";
 
+const lang = "ar";
+
 const pageProps: SeoProps = {
     title: "موقع تحميل الفيديوهات المجاني على الإنترنت - saveplays.com",
     description:
@@ -68,7 +70,7 @@ const pageProps: SeoProps = {
         <main>
             <div class="container">
                 <SearchInput client:load placeholder={placeholder} />
-                <FeaturesGrid content={featuresGridContent} />
+                <FeaturesGrid content={featuresGridContent} lang={lang} />
                 <MainContent content={mainContent} />
                 <FeaturesAndCompatibilities
                     content={featuresAndCompatibilities}

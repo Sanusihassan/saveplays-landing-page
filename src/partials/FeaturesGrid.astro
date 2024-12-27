@@ -5,14 +5,14 @@ import {
     FaXTwitter,
     FaYoutube,
 } from "react-icons/fa6";
-const { content } = Astro.props;
+const { content, lang } = Astro.props;
 ---
 
 <section class="downloaders-features">
     <div class="downloaders-features-container">
         <div class="downloaders-features-grid">
             <a
-                href="/youtube-downloader"
+                href={`/${lang ? lang + "/" : ""}youtube-downloader`}
                 class="downloaders-features-item youtube"
                 aria-label={content.youtube.ariaLabel}
             >
@@ -25,7 +25,7 @@ const { content } = Astro.props;
                 </p>
             </a>
             <a
-                href="/facebook-downloader"
+                href={`/${lang ? lang + "/" : ""}facebook-downloader`}
                 class="downloaders-features-item facebook"
                 aria-label={content.facebook.ariaLabel}
             >
@@ -38,7 +38,7 @@ const { content } = Astro.props;
                 </p>
             </a>
             <a
-                href="/instagram-downloader"
+                href={`/${lang ? lang + "/" : ""}instagram-downloader`}
                 class="downloaders-features-item instagram"
                 aria-label={content.instagram.ariaLabel}
             >
@@ -51,7 +51,7 @@ const { content } = Astro.props;
                 </p>
             </a>
             <a
-                href="/twitter-downloader"
+                href={`/${lang ? lang + "/" : ""}twitter-downloader`}
                 class="downloaders-features-item twitter"
                 aria-label={content.twitter.ariaLabel}
             >

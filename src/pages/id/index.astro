@@ -16,6 +16,7 @@ import {
     title,
     pageProps,
 } from "../../content/content-id";
+const lang = "id";
 ---
 
 <html lang="id">
@@ -28,7 +29,7 @@ import {
         <main>
             <div class="container">
                 <SearchInput client:load placeholder={placeholder} />
-                <FeaturesGrid content={featuresGridContent} />
+                <FeaturesGrid content={featuresGridContent} lang={lang} />
                 <MainContent content={mainContent} />
                 <FeaturesAndCompatibilities
                     content={featuresAndCompatibilities}
