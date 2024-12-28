@@ -1,5 +1,5 @@
 import type { SeoProps } from "../partials/head";
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 
 export const title = "फ्री ऑनलाइन वीडियो डाउनलोडर";
 export const placeholder = "अपना लिंक यहां पेस्ट करें";
@@ -108,4 +108,8 @@ export const pageProps: SeoProps = {
     locale: "hi_IN",
     nofollow: false,
     noindex: false,
+};
+export const downloadResult: _downloadResult = {
+    select_quality: "गुणवत्ता चुनें",
+    download: "डाउनलोड करें"
 };

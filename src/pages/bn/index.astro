@@ -1,21 +1,23 @@
 ---
 // import DownloaderInput from "../../components/DownloaderInput";
+import Footer from "saveplays-footer/src/partials/Footer.astro";
 import NavBar from "saveplays-navbar/components/NavBar.tsx";
+import DownloadResult from "../../../components/DownloadResult";
 import { SearchInput } from "../../../components/Input";
+import {
+    downloadResult,
+    featuresAndCompatibilities,
+    featuresGridContent,
+    mainContent,
+    pageProps,
+    placeholder,
+    title,
+} from "../../content/content-bn";
+import MainContent from "../../MainContent.astro";
 import FeaturesAndCompatibilities from "../../partials/FeaturesAndCompatibilities.astro";
 import FeaturesGrid from "../../partials/FeaturesGrid.astro";
 import SeoHead from "../../partials/SeoHead.astro";
 import "../../yt-index.scss";
-import MainContent from "../../MainContent.astro";
-import Footer from "saveplays-footer/src/partials/Footer.astro";
-import {
-    featuresAndCompatibilities,
-    featuresGridContent,
-    mainContent,
-    placeholder,
-    title,
-    pageProps,
-} from "../../content/content-bn";
 const lang = "bn";
 ---
 
@@ -29,6 +31,7 @@ const lang = "bn";
         <main>
             <div class="container">
                 <SearchInput client:load placeholder={placeholder} />
+                <DownloadResult client:load content={downloadResult} />
                 <FeaturesGrid content={featuresGridContent} lang={lang} />
                 <MainContent content={mainContent} />
                 <FeaturesAndCompatibilities

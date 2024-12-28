@@ -1,6 +1,6 @@
 // typescript
 import type { SeoProps } from "../partials/head";
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 
 export const title = "Kostenloser Online-Video-Downloader";
 export const placeholder = "Fügen Sie Ihren Link hier ein";
@@ -109,4 +109,9 @@ export const pageProps: SeoProps = {
     locale: "de_DE",
     nofollow: false,
     noindex: false,
+};
+
+export const downloadResult: _downloadResult = {
+    select_quality: "Qualität auswählen",
+    download: "Herunterladen"
 };

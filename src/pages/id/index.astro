@@ -15,7 +15,9 @@ import {
     placeholder,
     title,
     pageProps,
+    downloadResult,
 } from "../../content/content-id";
+import DownloadResult from "../../../components/DownloadResult";
 const lang = "id";
 ---
 
@@ -29,6 +31,7 @@ const lang = "id";
         <main>
             <div class="container">
                 <SearchInput client:load placeholder={placeholder} />
+                <DownloadResult client:load content={downloadResult} />
                 <FeaturesGrid content={featuresGridContent} lang={lang} />
                 <MainContent content={mainContent} />
                 <FeaturesAndCompatibilities

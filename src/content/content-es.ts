@@ -1,4 +1,4 @@
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 import type { SeoProps } from "../partials/head";
 
 export const title = "Descargador de Videos Online Gratis";
@@ -108,4 +108,9 @@ export const pageProps: SeoProps = {
     locale: "es_ES",
     nofollow: false,
     noindex: false,
+};
+
+export const downloadResult: _downloadResult = {
+    select_quality: "Seleccionar calidad",
+    download: "Descargar"
 };

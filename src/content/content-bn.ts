@@ -1,6 +1,6 @@
 // typescript
 import type { SeoProps } from "../partials/head";
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 
 export const title = "ফ্রি অনলাইন ভিডিও ডাউনলোডার";
 export const placeholder = "আপনার লিঙ্ক এখানে পেস্ট করুন";
@@ -109,4 +109,8 @@ export const pageProps: SeoProps = {
     locale: "bn_BD",
     nofollow: false,
     noindex: false,
+};
+export const downloadResult: _downloadResult = {
+    select_quality: "গুণমান নির্বাচন করুন",
+    download: "ডাউনলোড করুন"
 };

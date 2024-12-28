@@ -1,4 +1,4 @@
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 
 export const title = "تنزيل فيديوهات مجاني عبر الإنترنت";
 export const placeholder = "ألصق الرابط هنا";
@@ -71,3 +71,7 @@ export const featuresAndCompatibilities: _featuresAndCompatibilities = {
     compatibilityImageAlt: "متوافق مع المتصفحات الرئيسية لتنزيل الفيديوهات",
 };
 
+export const downloadResult: _downloadResult = {
+    select_quality: "اختر الجودة",
+    download: "تنزيل"
+};

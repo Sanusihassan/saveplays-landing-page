@@ -1,5 +1,5 @@
 import type { SeoProps } from "../partials/head";
-import type { _featuresGridContent, _mainContent, _featuresAndCompatibilities } from "./content";
+import type { _featuresGridContent, _mainContent, _featuresAndCompatibilities, _downloadResult } from "./content";
 export const title = "Бесплатный онлайн загрузчик видео";
 export const placeholder = "Вставьте вашу ссылку сюда";
 export const featuresGridContent: _featuresGridContent = {
@@ -109,3 +109,7 @@ export const pageProps: SeoProps = {
     noindex: false,
 };
 
+export const downloadResult: _downloadResult = {
+    select_quality: "Выберите качество",
+    download: "Скачать"
+};

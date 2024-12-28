@@ -1,4 +1,5 @@
 import type { SeoProps } from "../partials/head";
+import type { _downloadResult } from "./content";
 export const title = "Téléchargeur de Vidéos en Ligne Gratuit";
 export const placeholder = "Collez votre lien ici";
 export const featuresGridContent = {
@@ -106,4 +107,9 @@ export const pageProps: SeoProps = {
     locale: "fr_FR",
     nofollow: false,
     noindex: false,
+};
+
+export const downloadResult: _downloadResult = {
+    select_quality: "Sélectionner la qualité",
+    download: "Télécharger"
 };

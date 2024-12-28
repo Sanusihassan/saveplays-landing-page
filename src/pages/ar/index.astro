@@ -10,12 +10,14 @@ import "../../yt-index.scss";
 import MainContent from "../../MainContent.astro";
 import Footer from "saveplays-footer/src/partials/Footer.astro";
 import {
+    downloadResult,
     featuresAndCompatibilities,
     featuresGridContent,
     mainContent,
     placeholder,
     title,
 } from "../../content/content-ar";
+import DownloadResult from "../../../components/DownloadResult";
 
 const lang = "ar";
 
@@ -70,6 +72,7 @@ const pageProps: SeoProps = {
         <main>
             <div class="container">
                 <SearchInput client:load placeholder={placeholder} />
+                <DownloadResult client:load content={downloadResult} />
                 <FeaturesGrid content={featuresGridContent} lang={lang} />
                 <MainContent content={mainContent} />
                 <FeaturesAndCompatibilities

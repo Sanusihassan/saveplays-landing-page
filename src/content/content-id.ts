@@ -1,6 +1,6 @@
 // typescript
 import type { SeoProps } from "../partials/head";
-import type { _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
+import type { _downloadResult, _featuresAndCompatibilities, _featuresGridContent, _mainContent } from "./content";
 
 export const title = "Pengunduh Video Online Gratis";
 export const placeholder = "Tempelkan tautan Anda di sini";
@@ -110,3 +110,7 @@ export const pageProps: SeoProps = {
     nofollow: false,
     noindex: false,
 };
+export const downloadResult: _downloadResult = {
+    select_quality: "Pilih Kualitas",
+    download: "Unduh"
+}

@@ -108,6 +108,12 @@ export const pageProps: SeoProps = {
     noindex: false,
 };
 
+export const downloadResult = {
+    select_quality: "Select Quality",
+    download: "Download"
+}
+export type _downloadResult = typeof downloadResult;
+
 export type _featuresGridContent = typeof featuresGridContent;
 export type _mainContent = typeof mainContent;
 export type _featuresAndCompatibilities = typeof featuresAndCompatibilities;
