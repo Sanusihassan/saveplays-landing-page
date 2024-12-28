@@ -77,8 +77,8 @@ export const pageProps: SeoProps = {
     publishedTime: "2024-01-05T00:00:00+00:00",
     modifiedTime: "2024-09-27T15:56:10+00:00",
     twitter: {
-        handle: "@saveplays",
-        site: "@saveplays",
+        handle: "saveplaysx",
+        site: "saveplaysx",
     },
     structuredData: [
         {
