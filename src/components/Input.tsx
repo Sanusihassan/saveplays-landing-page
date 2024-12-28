@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { VscGitFetch } from "react-icons/vsc";
 import { AiOutlineLoading } from "react-icons/ai";
-import { setApiResponse } from "../src/store";
+import { setApiResponse } from "../store";
 
 
 

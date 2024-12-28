@@ -1,4 +1,4 @@
-import type { DownloadUrl } from "../src/store";
+import type { DownloadUrl } from "../store";
 
 // Format dropdown component
 export const FormatDropdown = ({

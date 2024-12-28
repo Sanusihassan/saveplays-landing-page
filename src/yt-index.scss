@@ -13,3 +13,8 @@ body {
         }
     }
 }
+
+
+svg {
+    @include extend("d-inline-flex")
+}

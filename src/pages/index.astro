@@ -1,7 +1,7 @@
 ---
-// import DownloaderInput from "../../components/DownloaderInput";
+// import DownloaderInput from "../components/DownloaderInput";
 import NavBar from "saveplays-navbar/components/NavBar.tsx";
-import { SearchInput } from "../../components/Input";
+import { SearchInput } from "../components/Input";
 import FeaturesAndCompatibilities from "../partials/FeaturesAndCompatibilities.astro";
 import FeaturesGrid from "../partials/FeaturesGrid.astro";
 import SeoHead from "../partials/SeoHead.astro";
@@ -17,7 +17,7 @@ import {
 	pageProps,
 	downloadResult,
 } from "../content/content";
-import DownloadResult from "../../components/DownloadResult";
+import DownloadResult from "../components/DownloadResult";
 ---
 
 <html lang="en">
@@ -30,7 +30,6 @@ import DownloadResult from "../../components/DownloadResult";
 		<main>
 			<div class="container">
 				<SearchInput client:load placeholder={placeholder} />
-				<DownloadResult client:load content={downloadResult} />
 				<DownloadResult client:load content={downloadResult} />
 				<FeaturesGrid content={featuresGridContent} lang="" />
 				<MainContent content={mainContent} />

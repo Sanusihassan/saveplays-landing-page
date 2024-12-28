@@ -1,14 +1,32 @@
-import React, { useEffect, useMemo } from 'react';
-import { apiResponse, type DownloadUrl } from '../src/store';
+import React, { useEffect, useMemo, useRef } from 'react';
+import { apiResponse } from '../store';
 import { useStore } from '@nanostores/react';
 import { FormatDropdown } from './FormatDropdown';
-import type { _downloadResult } from '../src/content/content';
+import type { _downloadResult } from '../content/content';
+export const sanitizeFilename = (filename: string): string => {
+    // Remove invalid filename characters and trim
+    return filename
+        .replace(/[<>:"/\\|?*]+/g, '') // Remove invalid chars
+        .replace(/\s+/g, '_')          // Replace spaces with underscores
+        .replace(/_{2,}/g, '_')        // Replace multiple underscores with single
+        .replace(/[.]+/g, '.')         // Replace multiple dots with single
+        .replace(/^[.-]+|[.-]+$/g, '') // Remove leading/trailing dots and dashes
+        .trim()
+        .slice(0, 255);                // Limit length to 255 chars
+};
+
+const getDownloadFilename = (title: string, format: string): string => {
+    const sanitizedTitle = sanitizeFilename(title);
+    return `${sanitizedTitle}.${format}`;
+};
+
 
 // Main component
 const DownloadResult = ({ content }: { content: _downloadResult }) => {
     // All hooks at the top level
     const [selectedUrl, setSelectedUrl] = React.useState<string>('');
     const data = useStore(apiResponse);
+    const downloadAnchor = useRef(null);
 
     // Helper functions
     const decodeHtmlEntities = (encodedString: string): string => {
@@ -44,9 +62,19 @@ const DownloadResult = ({ content }: { content: _downloadResult }) => {
 
     const handleDownload = () => {
         if (selectedUrl) {
-            window.open(selectedUrl, '_blank');
+            const link = downloadAnchor.current;
+            if (link) {
+                const selectedFormat = data?.downloadUrls.find(url => url.url === selectedUrl);
+                const format = selectedFormat?.ext?.toLowerCase() || selectedFormat?.ext?.toLowerCase() || 'mp4';
+                const filename = getDownloadFilename(cleanTitle, format);
+                link.href = selectedUrl;
+                link.download = filename;
+                link.click();
+            }
+
         }
     };
+
 
     if (!data) {
         return null;
@@ -111,6 +139,7 @@ const DownloadResult = ({ content }: { content: _downloadResult }) => {
                             </svg>
                             <span>{content.download}</span>
                         </button>
+                        <a href={selectedUrl} ref={downloadAnchor} target="_blank" rel="noopener noreferrer"></a>
                     </div>
                 </div>
             </div>
