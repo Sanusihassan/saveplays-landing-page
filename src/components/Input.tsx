@@ -63,7 +63,7 @@ export const SearchInput = ({ placeholder = "Paste your link here" }: { placehol
                     {isLoading ? <AiOutlineLoading className="loading" /> : <VscGitFetch />}
                 </button>
             </form>
-            {error && <p className="error-message text-center">{error}</p>}
+            {error ? <p className="error-message text-red-500 text-center">{error}</p> : null}
         </>
     );
 };
