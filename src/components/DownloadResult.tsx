@@ -90,6 +90,7 @@ const DownloadResult = ({ content }: { content: _downloadResult }) => {
                             <img
                                 src={data.thumbnail}
                                 alt={cleanTitle}
+                                title={cleanTitle}
                                 className="rounded-lg object-cover w-full h-full"
                             />
                             <div className="absolute bottom-2 right-2 bg-black bg-opacity-75 px-2 py-1 rounded text-white text-sm">
