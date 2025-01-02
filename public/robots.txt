@@ -7,3 +7,4 @@ Sitemap: https://www.saveplays.com/sitemap-index.xml
 Sitemap: https://www.saveplays.com/sitemap-0.xml
 Sitemap: https://www.saveplays.com/download-tools/sitemap-0.xml
 Sitemap: https://www.saveplays.com/download-tools/sitemap-index.xml
+Sitemap: https://www.saveplays.com/snapchat-downloader/sitemap-0.xml
