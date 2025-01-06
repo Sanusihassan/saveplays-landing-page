@@ -21,6 +21,7 @@ export const SearchInput = ({ placeholder = "Paste your link here" }: { placehol
         if (url.includes("tiktok.com")) return "/tiktok-downloader";
         if (url.includes("twitter.com") || url.includes("x.com")) return "/twitter-downloader";
         if (url.includes("snapchat")) return "/snapchat-downloader";
+        if (url.includes("threads")) return "/threads-downloader";
         return null;
     };
 
