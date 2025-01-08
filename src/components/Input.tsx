@@ -1,10 +1,8 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
 import { VscGitFetch } from "react-icons/vsc";
 import { AiOutlineLoading } from "react-icons/ai";
 import { setApiResponse } from "../store";
-
-
 
 const base = process.env.NODE_ENV === "development" ? "https://laughing-robot-r65x9p4pv5jcpvq6-3000.app.github.dev" : "/api"
 
@@ -12,6 +10,16 @@ export const SearchInput = ({ placeholder = "Paste your link here" }: { placehol
     const [url, setUrl] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
+
+    useEffect(() => {
+        const params = new URLSearchParams(window.location.search);
+        const queryUrl = params.get("url");
+        if (queryUrl) {
+            setUrl(queryUrl);
+        }
+    }, []);
+
+
 
     // Determine the correct endpoint based on the URL
     const getEndpoint = (url: string): string | null => {
