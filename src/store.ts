@@ -18,8 +18,14 @@ interface ApiResponse {
 
 // Create a Nanostore for the API response
 export const apiResponse = atom<ApiResponse | null>(null);
+export const stateUrl = atom<string>("");
 
 // Function to update the store with the API response
 export const setApiResponse = (response: ApiResponse) => {
     apiResponse.set(response);
+};
+
+// Function to update the state of `url`
+export const setUrl = (newUrl: string) => {
+    stateUrl.set(newUrl);
 };

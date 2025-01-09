@@ -2,14 +2,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { VscGitFetch } from "react-icons/vsc";
 import { AiOutlineLoading } from "react-icons/ai";
-import { setApiResponse } from "../store";
+import { setApiResponse, setUrl, stateUrl } from "../store";
+import { useStore } from "@nanostores/react";
 
-const base = process.env.NODE_ENV === "development" ? "https://laughing-robot-r65x9p4pv5jcpvq6-3000.app.github.dev" : "/api"
+const base = process.env.NODE_ENV === "development" ? "https://fantastic-waffle-75jxqpvpxqw3rr9r-3000.app.github.dev" : "/api"
 
 export const SearchInput = ({ placeholder = "Paste your link here" }: { placeholder?: string }) => {
-    const [url, setUrl] = useState<string>("");
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
+    const url = useStore(stateUrl);
 
     useEffect(() => {
         const params = new URLSearchParams(window.location.search);
