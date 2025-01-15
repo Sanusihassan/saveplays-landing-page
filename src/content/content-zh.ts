@@ -24,6 +24,26 @@ export const featuresGridContent: _featuresGridContent = {
         title: "X (Twitter) 下载器",
         description: "一键从 X (Twitter) 获取视频和媒体",
     },
+    bilibili: {
+        ariaLabel: "哔哩哔哩下载器",
+        title: "哔哩哔哩下载器",
+        description: "下载哔哩哔哩的视频和内容，支持高清质量",
+    },
+    bluesky: {
+        ariaLabel: "Bluesky下载器",
+        title: "Bluesky下载器",
+        description: "保存Bluesky社交网络的帖子和媒体内容",
+    },
+    snapchat: {
+        ariaLabel: "Snapchat下载器",
+        title: "Snapchat下载器",
+        description: "安全下载Snapchat的故事和共享内容",
+    },
+    dailymotion: {
+        ariaLabel: "Dailymotion下载器",
+        title: "Dailymotion下载器",
+        description: "以您喜欢的质量从Dailymotion下载视频",
+    }
 };
 export const mainContent: _mainContent = {
     title: "免费在线视频下载器。",

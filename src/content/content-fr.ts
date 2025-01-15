@@ -1,8 +1,8 @@
 import type { SeoProps } from "../partials/head";
-import type { _downloadResult } from "./content";
+import type { _downloadResult, _featuresGridContent } from "./content";
 export const title = "Téléchargeur de Vidéos en Ligne Gratuit";
 export const placeholder = "Collez votre lien ici";
-export const featuresGridContent = {
+export const featuresGridContent: _featuresGridContent = {
     youtube: {
         ariaLabel: "Téléchargeur YouTube",
         title: "Téléchargeur YouTube",
@@ -23,6 +23,26 @@ export const featuresGridContent = {
         title: "Téléchargeur X (Twitter)",
         description: "Téléchargez des vidéos et médias de Twitter (X) en un seul clic",
     },
+    bilibili: {
+        ariaLabel: "Téléchargeur Bilibili",
+        title: "Téléchargeur Bilibili",
+        description: "Téléchargez des vidéos et du contenu de Bilibili en qualité HD",
+    },
+    bluesky: {
+        ariaLabel: "Téléchargeur Bluesky",
+        title: "Téléchargeur Bluesky",
+        description: "Enregistrez des publications et des médias du réseau social Bluesky",
+    },
+    snapchat: {
+        ariaLabel: "Téléchargeur Snapchat",
+        title: "Téléchargeur Snapchat",
+        description: "Téléchargez en toute sécurité les stories et le contenu partagé de Snapchat",
+    },
+    dailymotion: {
+        ariaLabel: "Téléchargeur Dailymotion",
+        title: "Téléchargeur Dailymotion",
+        description: "Téléchargez des vidéos depuis Dailymotion dans la qualité de votre choix",
+    }
 };
 export const mainContent = {
     title: "Téléchargeur de Vidéos en Ligne Gratuit.",
