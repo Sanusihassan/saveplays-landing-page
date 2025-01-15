@@ -9,3 +9,4 @@ Sitemap: https://www.saveplays.com/download-tools/sitemap-0.xml
 Sitemap: https://www.saveplays.com/download-tools/sitemap-index.xml
 Sitemap: https://www.saveplays.com/snapchat-downloader/sitemap-0.xml
 Sitemap: https://www.saveplays.com/threads-downloader/sitemap-0.xml
+Sitemap: https://www.saveplays.com/bilibili-downloader/sitemap-0.xml
