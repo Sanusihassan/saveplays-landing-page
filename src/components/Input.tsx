@@ -24,6 +24,7 @@ export const SearchInput = ({ placeholder = "Paste your link here" }: { placehol
 
     // Determine the correct endpoint based on the URL
     const getEndpoint = (url: string): string | null => {
+        // Main domain matches
         if (url.includes("facebook.com")) return "/facebook-downloader";
         if (url.includes("youtube.com") || url.includes("youtu.be")) return "/youtube-downloader";
         if (url.includes("instagram.com")) return "/instagram-downloader";
@@ -31,6 +32,16 @@ export const SearchInput = ({ placeholder = "Paste your link here" }: { placehol
         if (url.includes("twitter.com") || url.includes("x.com")) return "/twitter-downloader";
         if (url.includes("snapchat")) return "/snapchat-downloader";
         if (url.includes("threads")) return "/threads-downloader";
+
+        // Bilibili - both main site and short URL
+        if (url.includes("bilibili.com") || url.includes("b23.tv")) return "/bilibili-downloader";
+
+        // Bluesky - main site and potential short URLs
+        if (url.includes("bsky.app") || url.includes("bsky.social")) return "/bluesky-downloader";
+
+        // Dailymotion - main site and short URL
+        if (url.includes("dailymotion.com") || url.includes("dai.ly")) return "/dailymotion-downloader";
+
         return null;
     };
 
