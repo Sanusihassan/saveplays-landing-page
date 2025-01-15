@@ -25,6 +25,26 @@ export const featuresGridContent: _featuresGridContent = {
         title: "X (টুইটার) ডাউনলোডার",
         description: "এক ক্লিকেই X (টুইটার) থেকে ভিডিও এবং মিডিয়া ডাউনলোড করুন",
     },
+    bilibili: {
+        ariaLabel: "বিলিবিলি ডাউনলোডার",
+        title: "বিলিবিলি ডাউনলোডার",
+        description: "বিলিবিলি থেকে ভিডিও এবং কনটেন্ট HD মানে ডাউনলোড করুন",
+    },
+    bluesky: {
+        ariaLabel: "ব্লুস্কাই ডাউনলোডার",
+        title: "ব্লুস্কাই ডাউনলোডার",
+        description: "ব্লুস্কাই সামাজিক নেটওয়ার্ক থেকে পোস্ট এবং মিডিয়া সংরক্ষণ করুন",
+    },
+    snapchat: {
+        ariaLabel: "স্ন্যাপচ্যাট ডাউনলোডার",
+        title: "স্ন্যাপচ্যাট ডাউনলোডার",
+        description: "নিরাপদে স্ন্যাপচ্যাট স্টোরি এবং শেয়ার করা কনটেন্ট ডাউনলোড করুন",
+    },
+    dailymotion: {
+        ariaLabel: "ডেইলিমোশন ডাউনলোডার",
+        title: "ডেইলিমোশন ডাউনলোডার",
+        description: "ডেইলিমোশন থেকে আপনার পছন্দসই মানে ভিডিও ডাউনলোড করুন",
+    }
 };
 export const mainContent: _mainContent = {
     title: "ফ্রি অনলাইন ভিডিও ডাউনলোডার।",

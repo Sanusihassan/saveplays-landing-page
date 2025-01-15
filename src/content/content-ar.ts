@@ -24,6 +24,26 @@ export const featuresGridContent: _featuresGridContent = {
         title: "تنزيل من تويتر (X)",
         description: "احصل على الفيديوهات والوسائط من تويتر (X) بنقرة واحدة",
     },
+    bilibili: {
+        ariaLabel: "برنامج تنزيل Bilibili",
+        title: "برنامج تنزيل Bilibili",
+        description: "قم بتنزيل الفيديوهات والمحتوى من Bilibili بجودة عالية",
+    },
+    bluesky: {
+        ariaLabel: "برنامج تنزيل Bluesky",
+        title: "برنامج تنزيل Bluesky",
+        description: "احفظ المنشورات والوسائط من شبكة التواصل الاجتماعي Bluesky",
+    },
+    snapchat: {
+        ariaLabel: "برنامج تنزيل Snapchat",
+        title: "برنامج تنزيل Snapchat",
+        description: "قم بتنزيل قصص ومحتوى Snapchat بأمان",
+    },
+    dailymotion: {
+        ariaLabel: "برنامج تنزيل Dailymotion",
+        title: "برنامج تنزيل Dailymotion",
+        description: "قم بتنزيل الفيديوهات من Dailymotion بالجودة التي تفضلها",
+    }
 };
 
 export const mainContent: _mainContent = {

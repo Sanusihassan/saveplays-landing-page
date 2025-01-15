@@ -23,6 +23,26 @@ export const featuresGridContent: _featuresGridContent = {
         title: "Загрузчик X (Twitter)",
         description: "Скачивайте видео и медиа с X (Twitter) одним кликом",
     },
+    bilibili: {
+        ariaLabel: "Скачиватель Bilibili",
+        title: "Скачиватель Bilibili",
+        description: "Скачивайте видео и контент с Bilibili в HD качестве",
+    },
+    bluesky: {
+        ariaLabel: "Скачиватель Bluesky",
+        title: "Скачиватель Bluesky",
+        description: "Сохраняйте посты и медиа из социальной сети Bluesky",
+    },
+    snapchat: {
+        ariaLabel: "Скачиватель Snapchat",
+        title: "Скачиватель Snapchat",
+        description: "Скачивайте истории и общий контент из Snapchat безопасно",
+    },
+    dailymotion: {
+        ariaLabel: "Скачиватель Dailymotion",
+        title: "Скачиватель Dailymotion",
+        description: "Скачивайте видео с Dailymotion в предпочитаемом качестве",
+    }
 };
 export const mainContent: _mainContent = {
     title: "Бесплатный онлайн загрузчик видео.",

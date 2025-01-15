@@ -22,6 +22,26 @@ export const featuresGridContent = {
         title: "X (Twitter) Downloader",
         description: "Grab videos and media from Twitter (X) with a single click",
     },
+    bilibili: {
+        ariaLabel: "Bilibili Downloader",
+        title: "Bilibili Downloader",
+        description: "Download videos and content from Bilibili in HD quality",
+    },
+    bluesky: {
+        ariaLabel: "Bluesky Downloader",
+        title: "Bluesky Downloader",
+        description: "Save posts and media from Bluesky social network",
+    },
+    snapchat: {
+        ariaLabel: "Snapchat Downloader",
+        title: "Snapchat Downloader",
+        description: "Download Snapchat stories and shared content safely",
+    },
+    dailymotion: {
+        ariaLabel: "Dailymotion Downloader",
+        title: "Dailymotion Downloader",
+        description: "Download videos from Dailymotion in your preferred quality",
+    },
 };
 export const mainContent = {
     title: "Free Online Video Downloader.",

@@ -25,6 +25,26 @@ export const featuresGridContent: _featuresGridContent = {
         title: "Pengunduh X (Twitter)",
         description: "Ambil video dan media dari X (Twitter) hanya dengan satu klik",
     },
+    bilibili: {
+        ariaLabel: "Pengunduh Bilibili",
+        title: "Pengunduh Bilibili",
+        description: "Unduh video dan konten dari Bilibili dalam kualitas HD",
+    },
+    bluesky: {
+        ariaLabel: "Pengunduh Bluesky",
+        title: "Pengunduh Bluesky",
+        description: "Simpan postingan dan media dari jejaring sosial Bluesky",
+    },
+    snapchat: {
+        ariaLabel: "Pengunduh Snapchat",
+        title: "Pengunduh Snapchat",
+        description: "Unduh cerita Snapchat dan konten yang dibagikan dengan aman",
+    },
+    dailymotion: {
+        ariaLabel: "Pengunduh Dailymotion",
+        title: "Pengunduh Dailymotion",
+        description: "Unduh video dari Dailymotion dalam kualitas pilihan Anda",
+    }
 };
 export const mainContent: _mainContent = {
     title: "Pengunduh Video Online Gratis.",

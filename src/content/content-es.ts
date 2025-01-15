@@ -3,7 +3,7 @@ import type { SeoProps } from "../partials/head";
 
 export const title = "Descargador de Videos Online Gratis";
 export const placeholder = "Pega tu enlace aquí";
-export const featuresGridContent = {
+export const featuresGridContent: _featuresGridContent = {
     youtube: {
         ariaLabel: "Descargador de YouTube",
         title: "Descargador de YouTube",
@@ -24,8 +24,28 @@ export const featuresGridContent = {
         title: "Descargador de X (Twitter)",
         description: "Descarga videos y medios de Twitter (X) con un solo clic",
     },
+    bilibili: {
+        ariaLabel: "Descargador de Bilibili",
+        title: "Descargador de Bilibili",
+        description: "Descarga videos y contenido de Bilibili en calidad HD",
+    },
+    bluesky: {
+        ariaLabel: "Descargador de Bluesky",
+        title: "Descargador de Bluesky",
+        description: "Guarda publicaciones y medios de la red social Bluesky",
+    },
+    snapchat: {
+        ariaLabel: "Descargador de Snapchat",
+        title: "Descargador de Snapchat",
+        description: "Descarga historias y contenido compartido de Snapchat de manera segura",
+    },
+    dailymotion: {
+        ariaLabel: "Descargador de Dailymotion",
+        title: "Descargador de Dailymotion",
+        description: "Descarga videos de Dailymotion en la calidad que prefieras",
+    }
 };
-export const mainContent = {
+export const mainContent: _mainContent = {
     title: "Descargador de Videos Online Gratis.",
     guideTitle: "Guía para Usar el Descargador de Videos Online de SavePlays.com",
     introduction:
@@ -56,7 +76,7 @@ export const mainContent = {
         },
     },
 };
-export const featuresAndCompatibilities = {
+export const featuresAndCompatibilities: _featuresAndCompatibilities = {
     resolutionTitle:
         "Explora diferentes resoluciones de video: desde SD hasta soporte para descargas en 4K",
     resolutionDescription:

@@ -1,13 +1,13 @@
 ---
-// <!-- this is my features grid, please also add
-//     tiktok-downloader, snapchat-downloader, threads-downloader and youtube-audio-player.
-// -->
 import {
     FaFacebook,
     FaInstagram,
     FaXTwitter,
     FaYoutube,
+    FaSnapchat,
 } from "react-icons/fa6";
+import { SiBilibili, SiDailymotion } from "react-icons/si";
+import { BsCloud } from "react-icons/bs"; // For Bluesky
 const { content, lang } = Astro.props;
 ---
 
@@ -66,6 +66,58 @@ const { content, lang } = Astro.props;
                     {content.twitter.description}
                 </p>
             </a>
+            <a
+                href={`/${lang ? lang + "/" : ""}bilibili-downloader`}
+                class="downloaders-features-item bilibili"
+                aria-label={content.bilibili.ariaLabel}
+            >
+                <SiBilibili className="downloaders-features-icon" />
+                <h3 class="downloaders-features-title">
+                    {content.bilibili.title}
+                </h3>
+                <p class="downloaders-features-description">
+                    {content.bilibili.description}
+                </p>
+            </a>
+            <a
+                href={`/${lang ? lang + "/" : ""}bluesky-downloader`}
+                class="downloaders-features-item bluesky"
+                aria-label={content.bluesky.ariaLabel}
+            >
+                <BsCloud className="downloaders-features-icon" />
+                <h3 class="downloaders-features-title">
+                    {content.bluesky.title}
+                </h3>
+                <p class="downloaders-features-description">
+                    {content.bluesky.description}
+                </p>
+            </a>
+            <a
+                href={`/${lang ? lang + "/" : ""}snapchat-downloader`}
+                class="downloaders-features-item snapchat"
+                aria-label={content.snapchat.ariaLabel}
+            >
+                <FaSnapchat className="downloaders-features-icon" />
+                <h3 class="downloaders-features-title">
+                    {content.snapchat.title}
+                </h3>
+                <p class="downloaders-features-description">
+                    {content.snapchat.description}
+                </p>
+            </a>
+            <a
+                href={`/${lang ? lang + "/" : ""}dailymotion-downloader`}
+                class="downloaders-features-item dailymotion"
+                aria-label={content.dailymotion.ariaLabel}
+            >
+                <SiDailymotion className="downloaders-features-icon" />
+                <h3 class="downloaders-features-title">
+                    {content.dailymotion.title}
+                </h3>
+                <p class="downloaders-features-description">
+                    {content.dailymotion.description}
+                </p>
+            </a>
         </div>
     </div>
 </section>
@@ -96,6 +148,27 @@ const { content, lang } = Astro.props;
             &.twitter {
                 border-top: 4px solid #000 !important;
                 color: #000;
+            }
+            &.bilibili {
+                border-top: 4px solid #00a1d6 !important;
+                color: #00a1d6;
+            }
+            &.bluesky {
+                border-top: 4px solid #0560ff !important;
+                color: #0560ff;
+            }
+            &.snapchat {
+                border-top: 4px solid #fffc00 !important;
+                color: #000;
+
+                .downloaders-features-icon {
+                    color: #fffc00;
+                    -webkit-text-stroke: 1px black;
+                }
+            }
+            &.dailymotion {
+                border-top: 4px solid #00b2ff !important;
+                color: #00b2ff;
             }
             background-color: white;
             border-radius: 12px;
