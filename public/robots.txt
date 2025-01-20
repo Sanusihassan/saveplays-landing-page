@@ -11,3 +11,4 @@ Sitemap: https://www.saveplays.com/snapchat-downloader/sitemap-0.xml
 Sitemap: https://www.saveplays.com/threads-downloader/sitemap-0.xml
 Sitemap: https://www.saveplays.com/bilibili-downloader/sitemap-0.xml
 Sitemap: https://www.saveplays.com/dailymotion-downloader/sitemap-0.xml
+Sitemap: https://www.saveplays.com/loom-downloader/sitemap-0.xml
